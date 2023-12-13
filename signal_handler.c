@@ -7,9 +7,9 @@
  *
  * Return: Nothing
  */
-void signal_handler(int z)
+void signal_handler(int x)
 {
-	(void) z;
+	(void) x;
 	write(1, "\n$ ", 3);
 }
 /**
@@ -18,8 +18,8 @@ void signal_handler(int z)
  *
  * Return: Nothing
  */
-void signal_handler2(int z)
+void signal_handler2(int x)
 {
-	(void) z;
+	(void) x;
 	write(1, "\n", 1);
 }

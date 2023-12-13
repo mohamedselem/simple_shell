@@ -78,15 +78,15 @@ char *_strcpy(char *dest, char *src);
 char *_strtok(char *str, const char *delim);
 char **getParameters(char *buffer, hshpack *shpack);
 int executeCmd(char *program, char *command[], char **env, hshpack *shpack);
-void signal_handler(int z);
-void signal_handler2(int z);
+void signal_handler(int x);
+void signal_handler2(int x);
 int _getline(char **buffer, size_t *bufsize, int fd);
 void free_doubpoint(char **p);
 int _strlendp(char **s);
 char **checkInput(int ac, char **av, size_t *bufsize,
-		  char **buffer, hshpack *shpack);
+			char **buffer, hshpack *shpack);
 hshpack *set_struct(char *argv0, int *errn, int *exnum, int *relation,
-		    int *run_able, char ***env, int *unsetnull);
+			int *run_able, char ***env, int *unsetnull);
 int _error(int errn, hshpack *shpack, int exnum);
 void addCmd(hshpack *shpack, char *buffer, char *command, char **parameters);
 void addPathToCmd(hshpack *shpack, char *pathCmd);
