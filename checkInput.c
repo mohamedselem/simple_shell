@@ -33,7 +33,7 @@ char **checkInput(int ac, char **av, size_t *bufsize,
 
 		if (charac == -1)
 		{
-			extnm = shpack->extnm[0];
+			extnm = shpack->exitnum[0];
 			free(*buffer);
 			if (*(shpack->envCpy))
 				free_doubpoint(*(shpack->envCpy));

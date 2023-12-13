@@ -92,7 +92,7 @@ ssize_t _cd_cmd(hshpack *shpack)
 		CHK = chdir(dir);
 	if (CHK == 0 && chkminus == 1)
 		write(1, dir, _strlen(dir)), write(1, "\n", 1);
-	if (check != 0)
+	if (CHK != 0)
 		_error(4, shpack, 2), exit = -1;
 	else
 	{
