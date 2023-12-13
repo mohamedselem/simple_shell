@@ -50,7 +50,6 @@ char *auxcd(hshpack *shpack, char *currdir)
 	if (!pwd2)
 	{
 		pwd = _strdup(currdir);
-		
 	}
 
 	dir = pwd;
@@ -67,7 +66,7 @@ char *auxcd(hshpack *shpack, char *currdir)
 ssize_t _cd_cmd(hshpack *shpack)
 {
 	char *currdir = NULL, *dir = NULL, **newenv, *oldpwd = NULL;
-	int EXT = 1, CHK = 1, chkminus = 0;
+	int exit = 1, CHK = 1, chkminus = 0;
 
 	currdir = getcwd(NULL, 4096);
 	if (!currdir)
@@ -94,7 +93,7 @@ ssize_t _cd_cmd(hshpack *shpack)
 	if (CHK == 0 && chkminus == 1)
 		write(1, dir, _strlen(dir)), write(1, "\n", 1);
 	if (check != 0)
-		_error(4, shpack, 2), EXT = -1;
+		_error(4, shpack, 2), exit = -1;
 	else
 	{
 		newenv = _setenv(*(shpack->envCpy), "PWD", dir, shpack);
@@ -105,5 +104,5 @@ ssize_t _cd_cmd(hshpack *shpack)
 	free(shpack->options), free(currdir), free(oldpwd);
 	if (chkminus == 1)
 		free(dir);
-	return (EXT);
+	return (exit);
 }

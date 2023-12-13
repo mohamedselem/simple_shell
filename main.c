@@ -99,7 +99,7 @@ hshpack *set_struct(char *argv0, int *errn, int *exnum,
  * @command: command written after promp
  * @parameters: parameters of the commands
  *
- * Return: No 
+ * Return: No
  */
 void addCmd(hshpack *shpack, char *buffer, char *command, char **parameters)
 {
@@ -113,7 +113,7 @@ void addCmd(hshpack *shpack, char *buffer, char *command, char **parameters)
  * @shpack: the shell struct
  * @pathCmd: path of cmd written after propmp
  *
- * Return: No 
+ * Return: No
  */
 void addPathToCmd(hshpack *shpack, char *pathCmd)
 {

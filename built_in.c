@@ -46,7 +46,7 @@ ssize_t _exit_cmd(hshpack *shpack)
  */
 ssize_t _env_cmd(hshpack *shpack)
 {
-	char **1;
+	char **str1;
 	int check1 = 1;
 
 	if (*(shpack->envCpy) == NULL)
